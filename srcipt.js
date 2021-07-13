@@ -1,47 +1,79 @@
-// MVP
-// Make namespace App
+  const app={};
+        app.weatherKey="2ff58d1b2bae16b569f1995e91622cd8";
+        app.forecastKey='b1bc1253abd4442ca7e87981134fa9e7';
+        app.newsKey="60bd731410f25a2a1d87e28199614207";
+        app.weatherUrl="http://api.weatherstack.com";
+        app.forecastUrl="http://api.weatherbit.io/v2.0/forecast/daily";
+        app.newsUrl="http://api.mediastack.com/v1/news";
+
+        app.fetchWeatherCommand= function(){
+            const url= new URL(`${app.weatherUrl}/current`);
+            url.search=new URLSearchParams({
+                access_key:app.weatherKey,
+                query:'Toronto'
+            })
+            fetch(url) 
+                .then(function(res){
+                    console.log(res);
+                    return res.json();
+                })
+                .then(function(data){
+                    console.log(data);
+                })
+
+        }
 
 
-// Header Nav section//
-// 
-// Access live JS method to get current Date and Time
-//  
-// Weather API section
-// 
-// Make sure Weather API is good and able to recieve data we require
-// Get API weekly data
-// Store API data into useable Variables
-// append weekly API Data onto DOM
-// 
-// AC control unit Section
+        app.fetchForecastCommand= function(){
+            const url= new URL(`${app.forecastUrl}/forecast`);
+            url.search=new URLSearchParams({
+                key:app.forecastKey,
+                city:'Toronto',
+                days:5
+            })
+            fetch(url) 
+                .then(function(res){
+                    console.log(res);
+                    return res.json();
+                })
+                .then(function(data){
+                    console.log(data);
+                })
 
-// Display a number in degrees
-// Store that number in a let variable
-// on click of + or - increase or decrease the number on the DOM
-// if statement that warns the user that this is as low as it can go or as high
-// 
+        }
 
-// MVP END//
-// 
-// Stretch Begins//
-// 
-//
-// Side Nav Section//
-// on click of font awesome Icons it will expand 1/4 sections to full screen and remove the other 3 sections (or however many sections we finish)
-// 
-// Door Locking Section//
-// 
-// list of doors in house
-// user can add a door if in section or remove a door if in section
-// on click transform before and after elements to create a toggle effect
-// 
-// Lighting Section
-// 
-// list of lights in house
-// user can add a light if in section or remove a light if in section
-// on click transform before and after elements to create a toggle effect
-// 
-// News and Task list Section //
-// have some default task lists in section
-// if clicked toggle done or not done state
-// news storys added to bottom of section through an API
+        // app.fetchNewsCommand= function(){
+        //     const url= new URL(`http://proxy.hackeryou.com`);
+        //     url.search=new URLSearchParams({
+        //         reqUrl: app.newsUrl,
+                   
+        //             params: {
+        //                 crossOrigin: true,
+        //                 access_key:app.newsKey,
+        //                 langauge:"en",
+        //                 sources:"cnn,bbc",
+        //                      limit:6
+        //                 }
+                    
+        //     })
+        //     fetch(url) 
+        //         .then(function(res){
+        //             console.log(res);
+        //             return res.json();
+        //         })
+        //         .then(function(data){
+        //             console.log(data);
+        //         })
+
+        // }
+
+
+
+        app.init= function(){
+            app.fetchWeatherCommand();
+            app.fetchForecastCommand();
+            // app.fetchNewsCommand();
+
+        }
+
+        app.init();
