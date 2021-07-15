@@ -14,13 +14,13 @@
             })
             fetch(url) 
                 .then(function(res){
-                    console.log(res);
+                    // console.log(res);
                     return res.json();
                 })
                 .then(function(data){
                     console.log(data);
                 })
-
+ 
         }
 
 
@@ -33,14 +33,45 @@
             })
             fetch(url) 
                 .then(function(res){
-                    console.log(res);
+                    
                     return res.json();
                 })
                 .then(function(data){
+                    app.dispayForecast(data);
                     console.log(data);
+                  
+                    
                 })
 
         }
+ 
+        app.dispayForecast = function(...weatherApi){
+            const ul = document.querySelector('.weatherForecastList');
+            const weatherApiLength=weatherApi[0].data.length;
+            console.log(weatherApiLength);
+
+            for (let i=0; i< weatherApiLength; i++){
+                // console.log(weatherApi[0].data[0].temp);
+                const listElement = document.createElement('li');
+                
+                listElement.innerHTML=`${weatherApi[0].data[i].temp} on ${weatherApi[0].data[i].datetime}`;
+                ul.append(listElement);
+                console.log(listElement);
+              
+                  
+
+
+            }
+            // weatherApi.forEach((datar) => {
+           
+
+                    
+                   
+                // })
+              
+        
+    }
+        
 
         // app.fetchNewsCommand= function(){
         //     const url= new URL(`http://proxy.hackeryou.com`);
