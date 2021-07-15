@@ -1,13 +1,6 @@
 @import 'header';
+@import 'setup';
+@import 'mediaQ';
+@import 'forecast';
+@import 'airCondition'
 
-ul
-li {
-list-style: none;
-}
-
-ul.weatherForecastList{
-    list-style: none;
-    li{
-        list-style: none;
-    }
-}
