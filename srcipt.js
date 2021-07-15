@@ -10,9 +10,31 @@ app.weatherUrl="http://api.weatherstack.com";
 app.forecastUrl="http://api.weatherbit.io/v2.0/forecast/daily";
 app.newsUrl="http://api.mediastack.com/v1/news";
 
+
+
+
+
+const displaytime= function(){
+    console.log();
+    const time=document.querySelector('.time')
+    time.textContent=new Date().toLocaleTimeString();
+  
+    
+}
+
+setInterval(displaytime, 1000);
+
+displaytime();
 // 
 // Fetching the the Weather API
 // 
+
+
+
+
+
+
+
 
 app.fetchWeatherCommand = function() {
     const url= new URL(`${app.weatherUrl}/current`);
