@@ -55,19 +55,19 @@
                 const listElement = document.createElement('li');
                 
                 listElement.innerHTML=`${weatherApi[0].data[i].temp} on ${weatherApi[0].data[i].datetime}`;
+                listElement.style.listStyle='none';
                 ul.append(listElement);
                 console.log(listElement);
               
                   
 
-
-            }
+            }  
             // weatherApi.forEach((datar) => {
            
 
                     
                    
-                // })
+                // }) test comment test comment thisis a testttt
               
         
     }
