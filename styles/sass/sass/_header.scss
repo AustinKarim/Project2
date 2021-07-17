@@ -28,32 +28,3 @@ header {
   border: 2px solid red;
 }
 
-.airConditioningSection {
-  display: flex;
-  margin-left: 100px;
-  font-family: 'Otomanopee One', sans-serif;  
-}
-.temp {
-  font-size: 2rem;
-}
-
-.circle {
-  display: flex;
-}
-
-.buttonContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding-left: 50px;
-}
-
-button{
-  background: none;
-}
-
-.fa-circle {
-  font-size: 1rem;
-  margin-top: 30px;
-}
