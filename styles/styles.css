@@ -251,11 +251,40 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: center;
-  margin-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 50px;
+  color: #4996C7;
+}
+
+.userbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+img {
+  width: 115px;
+  margin-right: 30px;
+}
+
+.title {
+  color: #4996C7;
+}
+
+.title h1 {
+  color: #4996C7;
+  margin: 0;
+  margin-bottom: -5px;
+}
+.title p {
+  color: #4996C7;
 }
 
 .timeContainer {
@@ -267,8 +296,10 @@ nav {
 }
 
 header {
-  background: lightblue;
+  background: url("/images/BG-junohome.png");
   padding: 30px;
+  background-size: cover;
+  background-position: center;
 }
 
 header .wrapper {
@@ -279,25 +310,51 @@ header .wrapper {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 100px auto;
-  padding: 100px;
-  border: 2px solid grey;
+  padding: 40px;
 }
 
-.airConditioningSection, .forecastSection {
-  padding: 50px;
-  border: 2px solid red;
+div.tempsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.airConditioningSection:hover, .forecastSection:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.tempsection h2 {
+  margin-right: 10px;
+}
+
+.weatherToday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div .weatherToday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid white;
+  border-width: 150%;
+}
+
+.weatherUpdateBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.airConditioningSection {
+  padding-left: 80px;
 }
 
 .airConditioningSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 100px;
   font-family: "Otomanopee One", sans-serif;
 }
 
@@ -309,18 +366,33 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid grey;
+  background-color: white;
+  color: #54A5D9;
   padding: 50px 70px;
   border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 10px purple;
-          box-shadow: 10px 10px 10px purple;
+  position: relative;
 }
 
-.circle:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.circle::after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  left: -10px;
+  top: -10.5px;
+  border-radius: 100%;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#556CCD), to(#6AB5D8));
+  background: linear-gradient(#556CCD, #6AB5D8);
 }
 
+p.temp {
+  margin-left: 10px;
+}
+
+@-webkit-keyframes rotato {}
+
+@keyframes rotato {}
 .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,6 +410,12 @@ header .wrapper {
 
 button {
   background: none;
+  border: none;
+  color: #fff;
+}
+
+button i {
+  font-size: 25px;
 }
 
 button:hover {
@@ -348,9 +426,30 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
+  color: #54A5D9;
 }
 
-@media (max-width: 830px) {
+.airConditioningSection, .forecastSection {
+  padding: 80px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.labeltemp {
+  position: absolute;
+  bottom: 15px;
+  left: 102px;
+}
+
+.forecastSection {
+  margin-right: -15px;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
   header .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -370,12 +469,144 @@ button:hover {
     margin-left: 0px;
   }
 }
-@media (max-width: 585px) {
+@media (max-width: 600px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .timeContainer {
+    margin-top: -15px;
+    padding: 30px 20px;
+  }
+
   header .wrapper {
     border: none;
   }
 
   .airConditioningSection, .forecastSection {
-    margin-left: -100px;
+    margin-left: -50px;
   }
+}
+@media (max-width: 475px) {
+  .footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 960px) {
+  .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 253px;
+    margin-top: 20px;
+    background-color: white;
+    color: #54A5D9;
+    padding: 71px 89px;
+    border-radius: 50%;
+    position: relative;
+  }
+}
+@media (max-width: 900px) {
+  .forecastSection {
+    margin-right: 20px;
+  }
+  .forecastSection ul li {
+    padding: 0px;
+    margin: 20px 0px;
+    margin-left: -30px;
+  }
+
+  .airConditioningSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .buttonContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 30px;
+    margin-left: -46px;
+  }
+
+  .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 253px;
+    margin-top: 20px;
+    background-color: white;
+    color: #54A5D9;
+    padding: 42px 63px;
+    border-radius: 50%;
+    position: relative;
+  }
+}
+@media (max-width: 700px) {
+  .tempsection {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .wrapper main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .airConditioningSection {
+    margin-top: 50px;
+  }
+
+  .forecastSection {
+    margin-right: 0px;
+  }
+}
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.junohome img {
+  width: 175px;
+}
+
+.auth img {
+  width: 50px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.junohome img {
+  width: 175px;
+}
+
+.auth img {
+  width: 50px;
 }
