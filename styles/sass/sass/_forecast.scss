@@ -6,10 +6,14 @@
 
 div .weatherToday{
     display:flex;
+    border-bottom:1px solid white;
+    border-width: 150%;
   }
 
   .weatherUpdateBox{
       display: flex;
   }
 
-  
+  .airConditioningSection{
+      padding-left:80px;
+  }

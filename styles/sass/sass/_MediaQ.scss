@@ -1,9 +1,13 @@
-@media (max-width: 830px) {
+
+
+@media (max-width: 900px) {
   header .wrapper {
     display: flex;
     flex-direction: column;  
     gap: 60px;  
     
+
+
   }
 
   .airConditioningSection, .forecastSection {
@@ -13,16 +17,134 @@
   .airConditioningSection {
     margin-left: 0px;
   }
+
+
+
 }
 
-@media (max-width: 585px) {
+@media (max-width: 600px) {
+
+
+  nav{
+    flex-direction: column-reverse;
+  }
+  .timeContainer {
+    margin-top:-15px;
+    padding: 30px 20px;
+}
+
   header .wrapper {
     border: none;
   }
 
   .airConditioningSection, .forecastSection  {
-    margin-left: -100px;
+    margin-left: -50px;
   }
 
 
 }
+@media(max-width:475px){
+
+
+
+
+  .footer{
+    padding:30px;
+    
+  }
+
+}
+
+
+@media (max-width:960px){
+  .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 253px;
+    margin-top: 20px;
+    background-color: white;
+    color: #54A5D9;
+    padding: 71px 89px;
+    border-radius: 50%;
+    position: relative;
+}
+}
+
+@media (max-width:900px){
+  .forecastSection{
+    margin-right: 20px;
+
+    ul li{
+      padding: 0px;
+      margin:20px 0px;
+      margin-left:-30px;
+    }
+  }
+
+  .airConditioningSection{
+    flex-direction: column;
+  }
+  .buttonContainer{
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: -46px;
+  }
+
+  .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 253px;
+    margin-top: 20px;
+    background-color: white;
+    color: #54A5D9;
+    padding: 42px 63px;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+
+}
+
+
+
+
+
+@media (max-width:700px){
+  .tempsection{
+    flex-wrap: wrap;
+  }
+  
+  .wrapper main{
+    flex-wrap: wrap;
+
+  }
+  .airConditioningSection{
+  margin-top:50px;
+
+  }
+  .forecastSection{
+    margin-right: 0px;
+  }
+}
+
+.footer{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  padding:30px 75px;
+  align-items: center;
+}
+
+
+.junohome img{
+width:175px;
+}
+
+
+.auth img{
+  width:50px;
+}
+

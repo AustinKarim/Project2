@@ -281,6 +281,7 @@ img {
 .title h1 {
   color: #4996C7;
   margin: 0;
+  margin-bottom: -5px;
 }
 .title p {
   color: #4996C7;
@@ -305,6 +306,9 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 100px auto;
   padding: 40px;
 }
@@ -319,6 +323,10 @@ div.tempsection {
           justify-content: center;
 }
 
+.tempsection h2 {
+  margin-right: 10px;
+}
+
 .weatherToday {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,12 +337,18 @@ div .weatherToday {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 1px solid white;
+  border-width: 150%;
 }
 
 .weatherUpdateBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.airConditioningSection {
+  padding-left: 80px;
 }
 
 .airConditioningSection {
@@ -353,32 +367,32 @@ div .weatherToday {
   display: -ms-flexbox;
   display: flex;
   background-color: white;
-  color: #448AB7;
-  padding: 50px 65px;
+  color: #54A5D9;
+  padding: 50px 70px;
   border-radius: 50%;
+  position: relative;
+}
+
+.circle::after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  left: -10px;
+  top: -10.5px;
+  border-radius: 100%;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#556CCD), to(#6AB5D8));
+  background: linear-gradient(#556CCD, #6AB5D8);
 }
 
 p.temp {
   margin-left: 10px;
 }
 
-.circle::after {
-  width: 110%;
-  padding: 90px;
-  width: 500px;
-  position: absolute;
-  border: 3px solid;
-  border-color: linear-gradient(#6AB5D8, #556CCD);
-}
-
 @-webkit-keyframes rotato {}
 
 @keyframes rotato {}
-.circle:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,18 +426,30 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
-  color: #448AB7;
+  color: #54A5D9;
 }
 
 .airConditioningSection, .forecastSection {
-  padding: 50px;
+  padding: 80px;
+  border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: white;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 830px) {
+.labeltemp {
+  position: absolute;
+  bottom: 15px;
+  left: 102px;
+}
+
+.forecastSection {
+  margin-right: -15px;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
   header .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -443,12 +469,144 @@ button:hover {
     margin-left: 0px;
   }
 }
-@media (max-width: 585px) {
+@media (max-width: 600px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .timeContainer {
+    margin-top: -15px;
+    padding: 30px 20px;
+  }
+
   header .wrapper {
     border: none;
   }
 
   .airConditioningSection, .forecastSection {
-    margin-left: -100px;
+    margin-left: -50px;
   }
+}
+@media (max-width: 475px) {
+  .footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 960px) {
+  .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 253px;
+    margin-top: 20px;
+    background-color: white;
+    color: #54A5D9;
+    padding: 71px 89px;
+    border-radius: 50%;
+    position: relative;
+  }
+}
+@media (max-width: 900px) {
+  .forecastSection {
+    margin-right: 20px;
+  }
+  .forecastSection ul li {
+    padding: 0px;
+    margin: 20px 0px;
+    margin-left: -30px;
+  }
+
+  .airConditioningSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .buttonContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 30px;
+    margin-left: -46px;
+  }
+
+  .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 253px;
+    margin-top: 20px;
+    background-color: white;
+    color: #54A5D9;
+    padding: 42px 63px;
+    border-radius: 50%;
+    position: relative;
+  }
+}
+@media (max-width: 700px) {
+  .tempsection {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .wrapper main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .airConditioningSection {
+    margin-top: 50px;
+  }
+
+  .forecastSection {
+    margin-right: 0px;
+  }
+}
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.junohome img {
+  width: 175px;
+}
+
+.auth img {
+  width: 50px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.junohome img {
+  width: 175px;
+}
+
+.auth img {
+  width: 50px;
 }

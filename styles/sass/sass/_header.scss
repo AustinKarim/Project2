@@ -4,6 +4,7 @@
   width: 95%;
   max-width: 1700px;
   margin: 0 auto;
+
 }
 
 ul li {
@@ -43,6 +44,7 @@ nav {
 h1{
   color:#4996C7;
   margin:0;
+  margin-bottom: -5px;
 }
 
   p{
@@ -71,7 +73,7 @@ header{
 
 header .wrapper {
   display: flex;
-
+justify-content: center;
   margin: 100px auto;
   padding:40px;
 
@@ -83,8 +85,15 @@ header .wrapper {
 
 div.tempsection{
   display: flex;
-  width: 100%;
-  justify-content: center;
+ width: 100%;
+ justify-content: center;
+
+
+  
+  
+}
+.tempsection h2{
+  margin-right:10px;
 }
 
 

@@ -13,27 +13,36 @@
 .circle {
   display: flex;
   background-color:white;
-  color: #448AB7;
-  padding: 50px 65px;
+  color: #54A5D9;
+  padding: 50px 70px;
   border-radius: 50%;
+
+  position: relative;
+
   
+}
+
+
+.circle::after{
+  content: "";
+  width:110%;
+  height:110%;
+ z-index: -1;
+ left:-10px;
+ top:-10.5px;
+
+  border-radius:100%;
+  position:absolute;
+background:linear-gradient(#556CCD,#6AB5D8);
+
   
+
 }
 
 p.temp{
   margin-left:10px;
 }
 
-.circle::after{
-  width:110%;
-  padding:90px;
-  width:500px;
-  position: absolute;
-  border: 3px solid;
-  border-color: linear-gradient(#6AB5D8,#556CCD);
-  
-
-}
 
 @keyframes rotato{
 0%{
@@ -42,11 +51,6 @@ p.temp{
 100%{
 
 }
-}
-
-.circle:hover {
-  transform: scale(1.1);
-
 }
 
 .buttonContainer {
@@ -73,17 +77,33 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
- color:#448AB7;
+ color:#54A5D9;;
 
 }
 
 
 .airConditioningSection, .forecastSection  {
-  padding: 50px;
+  padding: 80px;
+ border-radius: 10px;
   
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: white;
   background-color: rgba(255, 255, 255, .3);
+
+}
+
+
+.labeltemp{
+  position:absolute;
+  bottom:15px;
+  left:102px;
+  
+}
+
+
+.forecastSection{
+  margin-right: -15px;
+  z-index: 2;
 }
 
