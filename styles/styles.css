@@ -256,6 +256,18 @@ nav {
           justify-content: space-evenly;
   text-align: center;
   margin-top: 50px;
+  color: #4996C7;
+}
+
+.title {
+  color: #4996C7;
+}
+
+.title h1 {
+  color: #4996C7;
+}
+.title p {
+  color: #4996C7;
 }
 
 .timeContainer {
@@ -281,11 +293,6 @@ header .wrapper {
   margin: 100px auto;
   padding: 100px;
   border: 2px solid grey;
-}
-
-.airConditioningSection, .forecastSection {
-  padding: 50px;
-  border: 2px solid red;
 }
 
 .airConditioningSection:hover, .forecastSection:hover {
@@ -378,4 +385,8 @@ button:hover {
   .airConditioningSection, .forecastSection {
     margin-left: -100px;
   }
+}
+.airConditioningSection, .forecastSection {
+  padding: 50px;
+  border: 2px solid blue;
 }

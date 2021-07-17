@@ -52,6 +52,20 @@ app.fetchWeatherCommand = function() {
         else{
             weathup="warm";
         }
+
+                
+        if (data.current.temperature > 22){
+            weathup="hot";
+            
+        }
+        else if(data.current.temperature <15){
+            weathup="cold";
+            
+            
+        }
+        else{
+            weathup="warm";
+        }
         
         const todayweather=document.querySelector('.weatherToday');
         todayweather.innerHTML=`<h2>It is ${weathup} today</h2> <h2> ${data.current.temperature}<i class=""></i></h2>`;
