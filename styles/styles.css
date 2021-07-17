@@ -251,11 +251,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-top: 20px;
-  padding-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 50px;
   color: #4996C7;
 }
 
@@ -281,6 +280,7 @@ img {
 
 .title h1 {
   color: #4996C7;
+  margin: 0;
 }
 .title p {
   color: #4996C7;
@@ -295,9 +295,10 @@ img {
 }
 
 header {
-  background: url(images/BG-junohome.png);
+  background: url("/images/BG-junohome.png");
   padding: 30px;
   background-size: cover;
+  background-position: center;
 }
 
 header .wrapper {
@@ -305,20 +306,23 @@ header .wrapper {
   display: -ms-flexbox;
   display: flex;
   margin: 100px auto;
-  padding: 100px;
-  border: 2px solid grey;
+  padding: 40px;
 }
 
-.airConditioningSection:hover, .forecastSection:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.tempsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .airConditioningSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 100px;
   font-family: "Otomanopee One", sans-serif;
 }
 
@@ -359,6 +363,7 @@ header .wrapper {
 
 button {
   background: none;
+  border: none;
 }
 
 button:hover {
@@ -369,11 +374,15 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
+  color: white;
 }
 
 .airConditioningSection, .forecastSection {
   padding: 50px;
-  border: 2px solid blue;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 830px) {

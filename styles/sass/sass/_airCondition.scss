@@ -1,6 +1,6 @@
 .airConditioningSection {
   display: flex;
-  margin-left: 100px;
+ 
   font-family: 'Otomanopee One', sans-serif;  
   
 }
@@ -13,9 +13,20 @@
 .circle {
   display: flex;
   border: 2px solid grey;
-  padding: 50px 70px;
+  padding: 70px;
   border-radius: 50%;
-  box-shadow:10px 10px 10px purple;  
+  
+}
+
+.circle::after{
+  width:110%;
+  padding:90px;
+  z-index
+
+}
+
+@keyframes rotato{
+
 }
 
 .circle:hover {
@@ -32,6 +43,7 @@
 
 button{
   background: none;
+  border: none;
 }
 
 button:hover {
@@ -41,10 +53,16 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
+ color:white;
 }
 
 
 .airConditioningSection, .forecastSection  {
   padding: 50px;
-  border: 2px solid blue;
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  background-color: rgba(255, 255, 255, .3);
 }
+

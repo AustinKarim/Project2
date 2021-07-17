@@ -10,7 +10,7 @@ const app={};
 // ---------------------------
 //                       API KEYS
 // -----------------------------
-app.weatherKey="2ff58d1b2bae16b569f1995e91622cd8";
+app.weatherKey="5092ea057ee1f8eeed50f83b7d3fefcd";
 app.forecastKey='b1bc1253abd4442ca7e87981134fa9e7';
 app.newsKey="60bd731410f25a2a1d87e28199614207";
 
@@ -132,7 +132,7 @@ app.dispayForecast = function(...weatherApi){
         listElement.style.listStyle='none';
         ul.append(listElement);
         
-        
+
         
     }  
 }
@@ -213,4 +213,3 @@ app.init();
     //             console.log(data);
     //         })
 
-// }

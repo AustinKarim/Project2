@@ -16,10 +16,8 @@ font-family: 'Noto Sans', sans-serif;
 nav {
   font-family: 'Otomanopee One', sans-serif;
   display: flex;
-  justify-content: space-evenly;
-  
-  margin-top: 20px;
-  padding-bottom:10px;
+  justify-content: space-between;
+  padding:10px 50px;
   color:#4996C7;
 
 
@@ -44,6 +42,7 @@ nav {
 .title{
 h1{
   color:#4996C7;
+  margin:0;
 }
 
   p{
@@ -62,10 +61,11 @@ h1{
 
 header{
  
-  background: url(images/BG-junohome.png);
+  background: url("/images/BG-junohome.png");
 
   padding:30px;
   background-size:cover;
+  background-position:center;
   }
 
 
@@ -73,17 +73,18 @@ header .wrapper {
   display: flex;
 
   margin: 100px auto;
-  padding:100px;
-  border: 2px solid grey;
+  padding:40px;
+
   
   
   
 }
 
 
-
-.airConditioningSection:hover, .forecastSection:hover {
-  transform: scale(1.1)
+div.tempsection{
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 
