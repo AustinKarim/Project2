@@ -133,6 +133,7 @@ app.dispayForecast = function(...weatherApi){
         ul.append(listElement);
         
         
+        
     }  
 }
 
