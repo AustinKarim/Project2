@@ -1,0 +1,11 @@
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: column;  
+    gap: 60px;  
+  }
+
+  .airConditioningSection {
+    margin-left: 0px;
+  }
+}
