@@ -9,6 +9,7 @@ ul li {
 list-style: none;
 font-family: 'Noto Sans', sans-serif;
 
+
 }
 
 nav {
@@ -17,9 +18,25 @@ nav {
   justify-content: space-evenly;
   text-align: center;
   margin-top: 50px;
+  color:#4996C7;
   
+
 }
 
+.title { 
+  color:#4996C7;
+}
+
+.title{
+h1{
+  color:#4996C7;
+}
+
+  p{
+    color:#4996C7;
+  }
+
+} 
 .timeContainer {
   padding: 50px 20px;
 }
@@ -31,6 +48,7 @@ nav {
 header {
   background: lightblue;
   padding: 30px;
+  
 }
 
 
@@ -45,10 +63,7 @@ header .wrapper {
   
 }
 
-.airConditioningSection, .forecastSection  {
-  padding: 50px;
-  border: 2px solid red;
-}
+
 
 .airConditioningSection:hover, .forecastSection:hover {
   transform: scale(1.1)
