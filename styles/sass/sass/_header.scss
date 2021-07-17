@@ -1,5 +1,57 @@
-ul
-li {
-list-style: none;
+
+
+.wrapper {
+  width: 95%;
+  max-width: 1700px;
+  margin: 0 auto;
 }
+ul li {
+list-style: none;
+font-family: 'Noto Sans', sans-serif;
+
+}
+
+nav {
+  font-family: 'Otomanopee One', sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 50px;
+  
+}
+
+.timeContainer {
+  padding: 50px 20px;
+}
+
+.time{
+  font-size: 2rem;
+}
+
+header {
+  background: lightblue;
+  padding: 30px;
+}
+
+
+header .wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  padding:100px;
+  border: 2px solid grey;
+  
+  
+  
+}
+
+.airConditioningSection, .forecastSection  {
+  padding: 50px;
+  border: 2px solid red;
+}
+
+.airConditioningSection:hover, .forecastSection:hover {
+  transform: scale(1.1)
+}
+
 

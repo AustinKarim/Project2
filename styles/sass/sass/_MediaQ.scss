@@ -1,0 +1,28 @@
+@media (max-width: 830px) {
+  header .wrapper {
+    display: flex;
+    flex-direction: column;  
+    gap: 60px;  
+    
+  }
+
+  .airConditioningSection, .forecastSection {
+    min-width: 350px;
+  }
+
+  .airConditioningSection {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 585px) {
+  header .wrapper {
+    border: none;
+  }
+
+  .airConditioningSection, .forecastSection  {
+    margin-left: -100px;
+  }
+
+
+}

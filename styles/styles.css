@@ -235,13 +235,147 @@ html {
   overflow: hidden;
 }
 
-ul li {
-  list-style: none;
+.wrapper {
+  width: 95%;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
-ul.weatherForecastList {
+ul li {
   list-style: none;
+  font-family: "Noto Sans", sans-serif;
 }
-ul.weatherForecastList li {
-  list-style: none;
+
+nav {
+  font-family: "Otomanopee One", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.timeContainer {
+  padding: 50px 20px;
+}
+
+.time {
+  font-size: 2rem;
+}
+
+header {
+  background: lightblue;
+  padding: 30px;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px auto;
+  padding: 100px;
+  border: 2px solid grey;
+}
+
+.airConditioningSection, .forecastSection {
+  padding: 50px;
+  border: 2px solid red;
+}
+
+.airConditioningSection:hover, .forecastSection:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.airConditioningSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 100px;
+  font-family: "Otomanopee One", sans-serif;
+}
+
+.temp {
+  font-size: 2rem;
+}
+
+.circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid grey;
+  padding: 50px 70px;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 10px purple;
+          box-shadow: 10px 10px 10px purple;
+}
+
+.circle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  padding-left: 50px;
+}
+
+button {
+  background: none;
+}
+
+button:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.fa-circle {
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+@media (max-width: 830px) {
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 60px;
+  }
+
+  .airConditioningSection, .forecastSection {
+    min-width: 350px;
+  }
+
+  .airConditioningSection {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 585px) {
+  header .wrapper {
+    border: none;
+  }
+
+  .airConditioningSection, .forecastSection {
+    margin-left: -100px;
+  }
 }
