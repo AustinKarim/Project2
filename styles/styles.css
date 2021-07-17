@@ -235,6 +235,12 @@ html {
   overflow: hidden;
 }
 
+.wrapper {
+  width: 95%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
 ul li {
   list-style: none;
   font-family: "Noto Sans", sans-serif;
@@ -245,14 +251,26 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
   margin-top: 50px;
 }
 
+.timeContainer {
+  padding: 50px 20px;
+}
+
+.time {
+  font-size: 2rem;
+}
+
 header {
+  background: lightblue;
+}
+
+header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,12 +280,16 @@ header {
   margin: 100px auto;
   padding: 100px;
   border: 2px solid grey;
-  width: 90%;
 }
 
 .airConditioningSection, .forecastSection {
   padding: 50px;
   border: 2px solid red;
+}
+
+.airConditioningSection:hover, .forecastSection:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 700px) {
@@ -302,6 +324,16 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 2px solid grey;
+  padding: 50px 70px;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 10px purple;
+          box-shadow: 10px 10px 10px purple;
+}
+
+.circle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .buttonContainer {
@@ -321,6 +353,11 @@ header {
 
 button {
   background: none;
+}
+
+button:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .fa-circle {
