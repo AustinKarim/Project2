@@ -309,7 +309,7 @@ header .wrapper {
   padding: 40px;
 }
 
-.tempsection {
+div.tempsection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,6 +317,24 @@ header .wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.weatherToday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div .weatherToday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weatherUpdateBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .airConditioningSection {
@@ -334,13 +352,28 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid grey;
-  padding: 50px 70px;
+  background-color: white;
+  color: #448AB7;
+  padding: 50px 65px;
   border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 10px purple;
-          box-shadow: 10px 10px 10px purple;
 }
 
+p.temp {
+  margin-left: 10px;
+}
+
+.circle::after {
+  width: 110%;
+  padding: 90px;
+  width: 500px;
+  position: absolute;
+  border: 3px solid;
+  border-color: linear-gradient(#6AB5D8, #556CCD);
+}
+
+@-webkit-keyframes rotato {}
+
+@keyframes rotato {}
 .circle:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -364,6 +397,11 @@ header .wrapper {
 button {
   background: none;
   border: none;
+  color: #fff;
+}
+
+button i {
+  font-size: 25px;
 }
 
 button:hover {
@@ -374,7 +412,7 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
-  color: white;
+  color: #448AB7;
 }
 
 .airConditioningSection, .forecastSection {
