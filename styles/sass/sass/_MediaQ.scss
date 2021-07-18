@@ -4,9 +4,7 @@
   header .wrapper {
     display: flex;
     flex-direction: column;  
-    gap: 60px;  
-    
-
+    gap: 60px;
 
   }
 
@@ -14,9 +12,11 @@
     min-width: 350px;
   }
 
-  .airConditioningSection {
-    margin-left: 0px;
+  .tempAndButtons {
+    gap:10px;
   }
+
+
 
 
 
@@ -82,13 +82,10 @@
     }
   }
 
-  .airConditioningSection{
-    flex-direction: column;
-  }
   .buttonContainer{
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 30px;
-    margin-left: -46px;
+    margin-left: -36px;
   }
 
   .circle {
@@ -102,7 +99,7 @@
     padding: 42px 63px;
     border-radius: 50%;
     position: relative;
-}
+  }
 
 
 

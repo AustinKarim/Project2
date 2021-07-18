@@ -1,8 +1,17 @@
 .airConditioningSection {
   display: flex;
- 
-  font-family: 'Otomanopee One', sans-serif;  
-  
+  flex-direction: column;
+  font-family: 'Otomanopee One', sans-serif;    
+}
+
+.acH2 {
+  font-family: 'Noto Sans', sans-serif;
+  margin-left: 25px;
+}
+
+.tempAndButtons {
+  display: flex;
+  padding-top: 5px;
 }
 
 
@@ -16,7 +25,6 @@
   color: #54A5D9;
   padding: 50px 70px;
   border-radius: 50%;
-
   position: relative;
 
   
@@ -27,13 +35,13 @@
   content: "";
   width:110%;
   height:110%;
- z-index: -1;
- left:-10px;
- top:-10.5px;
+  z-index: -1;
+  left:-10px;
+  top:-10.5px;
 
   border-radius:100%;
   position:absolute;
-background:linear-gradient(#556CCD,#6AB5D8);
+  background:linear-gradient(#556CCD,#6AB5D8);
 
   
 
@@ -77,14 +85,14 @@ button:hover {
 .fa-circle {
   font-size: 1rem;
   margin-top: 30px;
- color:#54A5D9;;
+  color:#54A5D9;;
 
 }
 
 
 .airConditioningSection, .forecastSection  {
   padding: 80px;
- border-radius: 10px;
+  border-radius: 10px;
   
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);

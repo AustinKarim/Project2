@@ -42,33 +42,22 @@ app.fetchWeatherCommand = function() {
         
         if (data.current.temperature > 22){
             weathup="hot";
-            
-        }
-        else if(data.current.temperature <15){
-            weathup="cold";
-            
-            
-        }
-        else{
-            weathup="warm";
-        }
+            icon = '<i class="fab fa-hotjar"></i>';
 
-                
-        if (data.current.temperature > 22){
-            weathup="hot";
             
         }
         else if(data.current.temperature <15){
             weathup="cold";
-            
+            icon = '<i class="fas fa-icicles"></i>'
             
         }
         else{
             weathup="warm";
+            icon = '<i class="fas fa-sun"></i>'
         }
         
         const todayweather=document.querySelector('.weatherToday');
-        todayweather.innerHTML=`<h2>It is ${weathup} today</h2> <h2> ${data.current.temperature}<i class=""></i></h2>`;
+        todayweather.innerHTML=`<h2>It is ${weathup} today</h2> <h2> ${data.current.temperature} ${icon}</h2>`;
         console.log(todayweather);
         
     })

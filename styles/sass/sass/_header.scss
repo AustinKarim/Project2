@@ -1,5 +1,4 @@
 
-
 .wrapper {
   width: 95%;
   max-width: 1700px;
@@ -30,7 +29,7 @@ nav {
   align-content:center;
   align-items: center;
 }
-   img{
+  img{
     width:115px;
     margin-right:30px;
 }
@@ -62,9 +61,8 @@ h1{
 
 
 header{
- 
-  background: url("/images/BG-junohome.png");
 
+  background: url("../images/BG-junohome.png");
   padding:30px;
   background-size:cover;
   background-position:center;
@@ -85,8 +83,8 @@ justify-content: center;
 
 div.tempsection{
   display: flex;
- width: 100%;
- justify-content: center;
+  width: 100%;
+  justify-content: center;
 
 
   

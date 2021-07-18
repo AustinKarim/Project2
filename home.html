@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Otomanopee+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/1636792d7e.js" crossorigin="anonymous"></script>
   <title>Project 2</title>
 </head>
@@ -18,11 +21,11 @@
       <nav>
         <div class="userbox">
           <div class="famimg">
-            <img src="images/Johndoefampng.png">
+            <img src="images/Johndoefampng.png" alt="family togther on couch">
           </div>      
           <div class="title">
             <h1 class="timegreeting">Hello!</h1>
-            <p>John Doe Family Panel</p>
+            <p>John Doe Family Panel. USE CHROME TO SEE ALL</p>
           </div>
         </div>
         
@@ -35,46 +38,37 @@
     <header>
       <div class="wrapper">
         <div class="tempsection">
-        <div class="forecastSection">
-          <div class="weatherToday">
-
+          <div class="forecastSection">
+            <div class="weatherToday"></div>
+            <ul class="weatherForecastList" id="weatherForecastListId"></ul>
           </div>
-          <ul class="weatherForecastList" id="weatherForecastListId">
-          </ul>
-        </div>
-        <div class="airConditioningSection">
-
-          <div class="circle">
-            
-            <p class ="temp">20 </p>
-            <div><i class="far fa-circle"></i></div>
-          </div>  
-          <div class="buttonContainer">
-            <button class="upButton"><i class="fas fa-plus"></i></button>
-            <button class="downButton"><i class="fas fa-minus"></i></button>
+          <div class="airConditioningSection">
+            <div class="acH2">
+              <h2>AC Temperature</h2>
+            </div>
+            <div class="tempAndButtons">
+              <div class="circle">            
+                <p class ="temp">20 </p>
+                <div><i class="far fa-circle"></i></div>
+              </div>  
+              <div class="buttonContainer">
+                <button class="upButton"><i class="fas fa-plus"></i></button>
+                <button class="downButton"><i class="fas fa-minus"></i></button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>      
+        </div>      
       </div>
     </header>
   </main>
-
-  <div class='footer'>
-
-<div class="junohome">
-<img src="images/logo.png">
-</div>
-<div class="auth">
-  <img src="images/auth.png">
-
-</div>
-
-
-
-</div>
-
-  </div>
-
+  <footer>
+    <div class="junohome">
+      <img src="images/logo.png" alt ="box Home picture">
+    </div>
+    <div class="auth">
+      <img src="images/auth.png" alt="fingerprint Icon">
+    </div>  
+</footer>
 </body>
 <script src="srcipt.js"></script>
 </html>

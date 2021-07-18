@@ -296,7 +296,7 @@ img {
 }
 
 header {
-  background: url("/images/BG-junohome.png");
+  background: url("../images/BG-junohome.png");
   padding: 30px;
   background-size: cover;
   background-position: center;
@@ -327,6 +327,10 @@ div.tempsection {
   margin-right: 10px;
 }
 
+.forecastSection, .weatherForecastList {
+  font-family: "Yomogi", cursive;
+}
+
 .weatherToday {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,7 +359,23 @@ div .weatherToday {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: "Otomanopee One", sans-serif;
+}
+
+.acH2 {
+  font-family: "Noto Sans", sans-serif;
+  margin-left: 25px;
+}
+
+.tempAndButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5px;
 }
 
 .temp {
@@ -449,6 +469,28 @@ button:hover {
   z-index: 2;
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.junohome img {
+  width: 175px;
+}
+
+.auth img {
+  width: 50px;
+}
+
 @media (max-width: 900px) {
   header .wrapper {
     display: -webkit-box;
@@ -465,8 +507,8 @@ button:hover {
     min-width: 350px;
   }
 
-  .airConditioningSection {
-    margin-left: 0px;
+  .tempAndButtons {
+    gap: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -519,20 +561,13 @@ button:hover {
     margin-left: -30px;
   }
 
-  .airConditioningSection {
+  .buttonContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .buttonContainer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin-top: 30px;
-    margin-left: -46px;
+    margin-left: -36px;
   }
 
   .circle {
@@ -567,28 +602,6 @@ button:hover {
     margin-right: 0px;
   }
 }
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 30px 75px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.junohome img {
-  width: 175px;
-}
-
-.auth img {
-  width: 50px;
-}
-
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

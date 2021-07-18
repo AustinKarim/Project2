@@ -1,4 +1,8 @@
 
+.forecastSection, .weatherForecastList {
+    font-family: 'Yomogi', cursive;
+}
+
 .weatherToday{
     display:flex;
 }
@@ -8,12 +12,12 @@ div .weatherToday{
     display:flex;
     border-bottom:1px solid white;
     border-width: 150%;
-  }
+}
 
-  .weatherUpdateBox{
-      display: flex;
-  }
+.weatherUpdateBox{
+    display: flex;
+}
 
-  .airConditioningSection{
-      padding-left:80px;
-  }
+.airConditioningSection{
+    padding-left:80px;
+}
